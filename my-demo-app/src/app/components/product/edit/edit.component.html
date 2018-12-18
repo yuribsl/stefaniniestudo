@@ -1,0 +1,29 @@
+<h3>Edit Product</h3>
+<div *ngIf="productForm">
+    
+
+    <form [formGroup]="productForm" (ngSubmit)="save()">
+        <table class="table table-bordered">
+            <tr>
+                <td>Id</td>
+                <td><input type="text"  readonly="readonly" formControlName="id" required="required"></td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td><input type="text" formControlName="name" required="required"></td>
+            </tr>
+            <tr>
+                <td>Price</td>
+                <td><input type="number" min="0" formControlName="price"></td>
+            </tr>
+            <tr>
+                <td>Quantity</td>
+                <td><input type="number" min="0" formControlName="quantity"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="Save"></td>
+            </tr>
+        </table>
+    </form>
+</div>
